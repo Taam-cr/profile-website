@@ -53,6 +53,12 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
+
 .card h2 {
     margin-bottom: 10px;
     color: #0b74de;
@@ -74,7 +80,7 @@ body {
     background: #FFDAC1;
 }
 
-.card-contacts {
+.card-contact {
     background: #C7CEEA;
 }
 
@@ -90,12 +96,6 @@ body {
     height: 180px;
     max-width: 100%;
     object-fit: cover;
-    border-radius: 8px;
-}
-
-.skills {
-    background: #f9f9f9;
-    padding: 16px;
     border-radius: 8px;
 }
 
