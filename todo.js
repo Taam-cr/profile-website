@@ -1,21 +1,22 @@
-const input = document.getElementById("taskInput");
+//lấy phần tử từ HTML
+const taskInput= document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
-//khi bấm nút thêm
+//Hàm thêm task
 function addTask() {
-    const taskText = input.ariaValueMax.trim();
+    const taskText = taskInput.ariaValueMax.trim();
 
     if (taskText !== "") {
-        const li = document.createElement("li");//tạo thẻ li
+        //tạo thẻ li
+        const li = document.createElement("li");
         li.textContent = taskText; //gán nội dung
 
         //tạo nút xóa
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "❌"
-        deleteBtn.style.marginLeft = "10px";
 
-        //khi bấm xóa
+        //khi bấm xóa -> xóa task
         deleteBtn.addEventListener("click", function() {
             li.remove;
         });
@@ -24,12 +25,23 @@ function addTask() {
         li.appendChild(deleteBtn);
         taskList.appendChild(li); //thêm vào ul
 
-        input.value = ""; //reset ô input
+        taskInput.value = ""; //reset ô input
     }
 }
 
+//khi bấm nút thêm
 addBtn.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         addTask();
     }
 });
+
+// taskInput.value.trim() → tránh nhập toàn khoảng trắng.
+
+// addTask() gom toàn bộ logic lại, để không lặp code.
+
+// deleteBtn.addEventListener("click", …) → xóa task khi bấm ❌.
+
+// Có xử lý phím Enter, ngoài bấm nút “Thêm”.
+
+// Reset input về rỗng sau khi thêm.
