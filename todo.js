@@ -3,13 +3,13 @@ const taskInput= document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
-//lấy task từ LocalStorage
+//lấy task từ LocalStorage nếu có, hoặc tạo mảng trổng
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 //hàm render danh sách
 function renderTasks() {
     taskList.innerHTML = ""; //xóa danh danh sách cũ
-    tasks.array.forEach((task, index) => {
+    tasks.forEach((task, index) => {
         const li = document.createElement("li");
         li.textContent = task;
         
