@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Đăng ký tài khoản</h1>
+        <form id="registerForm">
+            <div class="form-control">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" />
+                <small class="error"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+                <small class="error"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" />
+                <small class="error"></small>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
