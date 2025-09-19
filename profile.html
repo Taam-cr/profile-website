@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Website nâng cấp</title>
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">Dự án CNTT</div>
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Project</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <!-- PROFILE SECTION -->
+    <main class="container">
+        <section class="profile">
+            <img src="css/img/avata.png" alt="avatar" class="avatar"/>
+            <div class="info">
+                <h1>Trần Phan Thảo Tâm</h1>
+                <p>Lớp: INT55304 - Môn: Đồ án tốt nghiệp</p>
+                <p>Giới thiệu ngắn: Tôi đang học lập trình web với thầy Chat GPT của tôi</p>
+            </div>
+        </section>
+        
+        <!-- Dùng Grid -->
+         <section class="grid-layout" >
+            <!-- SKILLS/PROJECTS -->
+            <div class="card card-intro">
+                <h2>Giới thiệu</h2>
+                <p>Tôi là Thảo Tâm, đang học lập trình web</p>
+            </div>
+            <section class="card card-skills">
+                <h2>Kỹ năng</h2>
+                <ul>
+                    <li>💻 HTML & CSS</li>
+                    <li>🧠 JavaScript cơ bản</li>
+                 </ul>
+            </section>
+            <div class="card card-projects">
+                <h2>Dự án</h2>
+                <p>- Website cá nhân</p>
+                <p>- Ứng dụng To-do List</p>
+            </div>
+            <div class="card card-contact">
+                <h2>Liên hệ</h2>
+                <p>Email:thaotam@example.com</p>
+                <p><a href="https://github.com/Taam-cr"></a></p>
+            </div>
+         </section>
+    </main>
+    <!-- JS FEATURES ZONE -->
+    <div class="features-zone">
+        <!-- COUNTER -->
+        <div class="counter">
+            <h1>Ứng dụng đếm số lần bấm</h1>
+            <button id="inc">+1</button>
+            <button id="dec">-1</button>
+            <button id="reset">Reset</button>
+            <p id="result">Số lần bấm: 0</p>
+        </div>
+        <!-- TO-DO LIST -->
+        <div class="to-do">
+            <h1>To-do List</h1>
+            <input type="text" id="taskInput" placeholder="Nhập việc cần làm">
+            <button id="addBtn">Thêm</button>
+            <ul id="taskList"></ul>
+        </div>
+        <!-- FORM ĐĂNG KÝ / LIÊN HỆ -->
+        <div class="form">
+            <h1>Đăng ký tài khoản</h1>
+            <form id="registerForm">
+                <div class="form-control">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" />
+                    <small class="error"></small>
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" />
+                   <small class="error"></small>
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" />
+                    <small class="error"></small>
+                </div>
+
+                <button type="submit">Đăng ký</button>
+             </form>
+        </div>
+        <!-- THEME  -->
+        <div class="theme">
+            <p>Đổi chế độ Dark/Light</p>
+            <button id="toggleBtn">Đổi theme</button>
+        </div>
+    <footer class="site-footer">
+        <p>© 2025 - Portfolio Grid Layout</p>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>
